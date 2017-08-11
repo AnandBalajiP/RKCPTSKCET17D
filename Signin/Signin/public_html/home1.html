@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>UNITE-Home1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+
+
+
+            .button4 {
+                background-color: white;
+                color: black;
+                border: 2px solid #e7e7e7;
+            }
+
+            * {box-sizing:border-box}
+            body {font-family: Verdana,sans-serif;margin:0}
+            .mySlides {display:none}
+
+            /* Slideshow container */
+            .slideshow-container {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+            }
+
+            /* Next & previous buttons */
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+            }
+
+            /* Position the "next button" to the right */
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+
+            /* Caption text */
+            .text {
+                color: #f2f2f2;
+                font-size: 15px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                text-align: center;
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+                cursor:pointer;
+                height: 13px;
+                width: 13px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            .active, .dot:hover {
+                background-color: #717171;
+            }
+
+            /* Fading animation */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            @keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+                .prev, .next,.text {font-size: 11px}
+            }
+        </style>
+    </head>
+    <body style="background-image: url(bg2.jpg) ;background-repeat: no-repeat ;background-position: center;background-attachment: fixed;background-size: inherit">
+        <br>
+
+        <div id="menu" style="height: 50px;background-color: brown">
+
+            <h1><a style="font-family: cursive;color: whitesmoke;padding-left: 50px;float: left;size: 24px">unite</a></h1>
+            <a href="home.html" style="float: right;color: whitesmoke;padding-top: 13px;padding-right: 70px">LOG OUT</a>
+            <a href="/" style="float: right;color: whitesmoke;padding-top: 13px;padding-right: 70px">LOGGED IN</a>
+            <a href="profile.html" style="float: right;color: whitesmoke;padding-top: 13px;padding-right: 70px">PROFILE</a>
+
+        </div>
+
+        <br>
+        <div style="text-decoration-color: chocolate">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="i1.jpg" style="width:100%">
+                    <div class="text">Quote of the day</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="i4.jpg" style="width:100%">
+                    <div class="text">Car of the year</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="i5.jpg" style="width:100%">
+                    <div class="text">songs</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+                function myFunctio1() {
+                    document.getElementById("myP1").style.visibility = "show";
+                }
+                function myFunctio2() {
+                    document.getElementById("myP2").style.visibility = "show";
+                }
+                function myFunctio3() {
+                    document.getElementById("myP3").style.visibility = "show";
+                }
+                function myFunction1() {
+                    document.getElementById("lkd1").innerHTML = "Liked";
+                }
+                function myFunction11() {
+                    document.getElementById("fd11").innerHTML = "Friend";
+                }
+                function myFunction2() {
+                    document.getElementById("lkd2").innerHTML = "Liked";
+                }
+                function myFunction22() {
+                    document.getElementById("fd22").innerHTML = "Friend";
+                }
+                function myFunction3() {
+                    document.getElementById("lkd3").innerHTML = "Liked";
+                }
+                function myFunction33() {
+                    document.getElementById("fd33").innerHTML = "Friend";
+                }
+            </script>
+            <div style="background-color: burlywood">
+            <h2 style="font-family: cursive;padding-left: 100px;background-color: chocolate;color: whitesmoke">Timeline:</h2>
+            <div style="padding-left: 200px;width: 1000px;">
+
+                <p>From:<a href="anand.html" style="color: #717171">Anand Balaji P - anandbalaji2061996</a></p>
+                <div style="width: 400px;float: left">
+                    <img src="i6.jpg" alt="image1" style="float: left;width: 300px;height: 200px">
+                </div>
+
+                <p id="lkd1"> <button onclick="myFunction1()" >Like</button></p>
+                <p id="fd11"><button onclick="myFunction11()" >UnFriend</button></p>
+                <br>
+                <button type="submit" onclick="myFunctio1()">Comment</button><br>
+                <textarea id="myP" rows="2" cols="30" name="comment" form="usrform" placeholder="Enter the comment">
+                </textarea>
+                <br><br><br><br>
+
+
+            </div>
+            <hr>
+            <div style="padding-left: 200px;width: 1000px;">
+
+                <p>From:<a href="anand.html" style="color: #717171">Abdullah I - abdullah1996</a></p>
+                <div style="width: 400px;float: left">
+                    <img src="ads3.jpg" alt="image1" style="float: left;width: 300px;height: 200px">
+                </div>
+
+                <p id="lkd2"> <button onclick="myFunction2()" >Like</button></p>
+                <p id="fd22"><button onclick="myFunction22()" >UnFriend</button></p>
+                <br>
+                <button type="submit" onclick="myFunctio2()">Comment</button><br>
+                <textarea id="myP" rows="2" cols="30" name="comment" form="usrform" placeholder="Enter the comment">
+                </textarea>
+                <br><br><br><br>
+
+
+            </div>
+            <hr>
+            <div style="padding-left: 200px;width: 1000px;">
+
+                <p>From:<a href="aswin.html" style="color: #717171">Aswin G - aswing1997</a></p>
+                <div style="width: 400px;float: left">
+                    <img src="i7.jpg" alt="image1" style="float: left;width: 300px;height: 200px">
+                </div>
+
+                <p id="lkd3"> <button onclick="myFunction3()" >Like</button></p>
+                <p id="fd33"><button onclick="myFunction33()" >UnFriend</button></p>
+
+                <br>
+                <button type="submit" onclick="myFunctio3()">Comment</button><br>
+                <textarea id="myP" rows="2" cols="30" name="comment" form="usrform" placeholder="Enter the comment">
+                </textarea>
+                <br><br><br><br>
+
+
+            </div>
+            <hr>
+            </div>
+        </div>
+    </body>
+</html>

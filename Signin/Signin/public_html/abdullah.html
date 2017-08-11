@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Unite-Abdullah</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            function myFunctio1() {
+                    document.getElementById("myP1").style.visibility = "show";
+                }
+                function myFunctio2() {
+                    document.getElementById("myP2").style.visibility = "show";
+                }
+                function myFunctio3() {
+                    document.getElementById("myP3").style.visibility = "show";
+                }
+                function myFunction1() {
+                    document.getElementById("lkd1").innerHTML = "Liked";
+                }
+                function myFunction11() {
+                    document.getElementById("fd11").innerHTML = "UnFriend";
+                }
+                function myFunction2() {
+                    document.getElementById("lkd2").innerHTML = "Liked";
+                }
+                function myFunction22() {
+                    document.getElementById("fd22").innerHTML = "UnFriend";
+                }
+                function myFunction3() {
+                    document.getElementById("lkd3").innerHTML = "Liked";
+                }
+                function myFunction33() {
+                    document.getElementById("fd33").innerHTML = "UnFriend";
+                }
+            </script>
+        <div id="menu" style="height: 50px;background-color: brown">
+
+            <h1><a style="font-family: cursive;color: whitesmoke;padding-left: 50px;float: left;size: 24px">unite</a></h1>
+            <a href="home.html" style="float: right;color: whitesmoke;padding-top: 13px;padding-right: 70px">LOG OUT</a>
+            <a href="home1.html" style="float: right;color: whitesmoke;padding-top: 13px;padding-right: 70px">LOGGED IN</a>
+             <a href="profile.html" style="float: right;color: whitesmoke;padding-top: 13px;padding-right: 70px">PROFILE</a>
+
+        </div>
+            <br>
+            <div style="background-color: sandybrown;" >
+                
+                <div style="width: 250px;float: left; height: 250px">
+                <img src="pro2.jpg" width="250" height="250">
+                </div>
+                <div style="float: left;width: 250px;height: 250px;padding-left: 20px">
+                    <h5>Name         : Abdullah I</h5>
+                    <h5>Age          : 22</h5>
+                    <h5>Date of Birth: 15/06/1996</h5>
+                    <h5>Country      : India </h5>
+                    <h5>Followers    : 91   </h5>
+                    
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+        <div style="background-color: burlywood">
+            <h2 style="font-family: cursive;padding-left: 100px;background-color: chocolate;color: whitesmoke">Timeline:</h2>
+            <div style="padding-left: 200px;width: 1000px;">
+
+                <p>Tagged by:<a style="color: #717171">Anand - anand2061996</a></p>
+                <div style="width: 400px;float: left">
+                    <img src="i11.jpg" alt="image1" style="float: left;width: 300px;height: 200px">
+                </div>
+
+                <p id="lkd1"> <button onclick="myFunction1()" >Like</button></p>
+                <p id="fd11"><button onclick="myFunction11()" >Friend</button></p>
+                <br>
+                <button type="submit" onclick="myFunctio1()">Comment</button><br>
+                <textarea id="myP" rows="2" cols="30" name="comment" form="usrform" placeholder="Enter the comment">
+                </textarea>
+                <br><br><br><br>
+
+
+            </div>
+            <hr>
+            <div style="padding-left: 200px;width: 1000px;">
+
+                <p>Tagged by:<a  style="color: #717171">Avinash - avi96</a></p>
+                <div style="width: 400px;float: left">
+                    <img src="i8.jpg" alt="image1" style="float: left;width: 300px;height: 200px">
+                </div>
+
+                <p id="lkd2"> <button onclick="myFunction2()" >Like</button></p>
+                <p id="fd22"><button onclick="myFunction22()" >Friend</button></p>
+                <br>
+                <button type="submit" onclick="myFunctio2()">Comment</button><br>
+                <textarea id="myP" rows="2" cols="30" name="comment" form="usrform" placeholder="Enter the comment">
+                </textarea>
+                <br><br><br><br>
+
+
+            </div>
+            <hr>
+            <div style="padding-left: 200px;width: 1000px;">
+
+                <p>Tagged:<a  style="color: #717171">Ajeeth kumar - ajeeth1996</a></p>
+                <div style="width: 400px;float: left">
+                    <img src="i10.jpg" alt="image1" style="float: left;width: 300px;height: 200px">
+                </div>
+
+                <p id="lkd3"> <button onclick="myFunction3()" >Like</button></p>
+                <p id="fd33"><button onclick="myFunction33()" >Friend</button></p>
+
+                <br>
+                <button type="submit" onclick="myFunctio3()">Comment</button><br>
+                <textarea id="myP" rows="2" cols="30" name="comment" form="usrform" placeholder="Enter the comment">
+                </textarea>
+                <br><br><br><br>
+
+
+            </div>
+            <hr>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SignUp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+	.button {
+	border-radius: 4px;
+	background-color: #888;
+	border: none;
+	color: white;
+	text-align: center;
+	font-size: 28px;
+	padding: 20px;
+	width: 200px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+	}
+	
+	.button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+	}
+	
+	.button span:after {
+	content: '»';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+	}
+	
+	.button:hover span {
+	padding-right: 25px;
+	}
+	
+	.button:hover span:after {
+	opacity: 1;
+	right: 0;
+	}
+	</style>
+    </head>
+    <body style="background-image: url(signup2.jpg) ;background-repeat: no-repeat ;background-position: center;background-attachment: fixed;background-size: cover">
+        <div id="menu" style="background-color: brown;height: 50px;">
+
+            <h1><a style="font-family: cursive;color: whitesmoke;padding-left: 50px;float: left;size: 24px">unite</a></h1>
+            <a href="/" style="float: right;color: whitesmoke;padding-top: 13px;padding-right: 70px">SIGNUP</a>
+          
+
+        </div>
+        
+	<div id="n1" style="width: 1350px;height: 500px">
+	
+	<center>
+	<form style="width: 450px;padding-top: 50px" action="home1.html">
+	<fieldset>
+            <legend style="color: #f1f1f1;size: 20px">NEW USER</legend>
+	<div style="width: 200px;float: left">
+	<h3>User Name:</h3>
+	<h3>Password:</h3>
+	<h3>Email: </h3>
+	<h3>Phone No:</h3>
+	
+	</div>
+	<div style="width: 200px;float: left">
+            <h3><input type="text" required></h3>
+            <h3><input type="password" required></h3>
+            <h3><input type="email" required></h3>
+            <h3><input type="number" required></h3>
+	
+	</div>
+	<div class="container" style="background-color:#f1f1f1;width: 450px">
+	<a href="home1.html"> <button class="button"><span>LOG IN</span></button></a>
+	
+	</div>
+	</fieldset>
+	</form>
+	</center>
+	</div>
+	
+    </body>
+</html>
